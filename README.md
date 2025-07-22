@@ -39,7 +39,6 @@
 git clone https://github.com/Nishi-Kanta-Paul/Quizzify-AI-Interview-Question-Generator.git
 cd ai_interview_generator
 ```
-````
 
 ### 2. Install Dependencies
 
@@ -50,20 +49,18 @@ pip install -r requirements.txt
 ### 3. Install & Configure Ollama
 
 - Download Ollama: [https://ollama.com](https://ollama.com)
-
 - Add `ollama` to your system PATH
-
 - Test it:
 
-  ```bash
-  ollama --version
-  ```
+```bash
+ollama --version
+```
 
 - Pull a local LLM (e.g., `phi`):
 
-  ```bash
-  ollama pull phi
-  ```
+```bash
+ollama pull phi
+```
 
 ### 4. Run the App
 
@@ -72,6 +69,7 @@ python app.py
 ```
 
 Open in your browser:
+
 👉 [http://localhost:5000](http://localhost:5000)
 
 ---
@@ -108,15 +106,19 @@ Open in your browser:
 ## ❓ FAQ
 
 **Q: Is my data sent to the cloud?**
+
 **A:** Never. All processing happens locally via Ollama.
 
 **Q: Can I use a different LLM model?**
+
 **A:** Yes. Modify the model name in `ollama_interface.py` (default is `phi`).
 
 **Q: Why is the first run slow?**
+
 **A:** The model is downloaded and loaded into memory. Future runs are much faster.
 
 **Q: Can I use this for non-technical roles?**
+
 **A:** Absolutely. Just input any job title you want!
 
 ---
@@ -124,12 +126,14 @@ Open in your browser:
 ## 🛠 Troubleshooting
 
 **Problem:** `ollama` not found
+
 **Solution:**
 
 - Ensure Ollama is installed and added to PATH
 - Restart terminal after installation
 
 **Problem:** Timeout or no response
+
 **Solution:**
 
 - Wait for the model to fully load
@@ -140,8 +144,7 @@ Open in your browser:
 
 ## 🤝 Contributing
 
-We welcome contributions!
-Please open an issue or submit a pull request with improvements or feature suggestions.
+We welcome contributions! Please open an issue or submit a pull request with improvements or feature suggestions.
 
 ---
 
@@ -156,5 +159,3 @@ This project is licensed under the **MIT License**. See `LICENSE` for details.
 - [Ollama](https://ollama.com) – For enabling local LLM inference
 - [Flask](https://flask.palletsprojects.com) – For building the web UI
 - Built with ❤️ for **privacy-conscious** interview preparation
-
----
