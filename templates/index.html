@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quizzify: AI Interview Question Generator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>🧠 Quizzify: AI Interview Question Generator</h2>
+      <form method="POST">
+        <div class="form-control">
+          <label>Job Role:</label>
+          <input
+            type="text"
+            name="job_role"
+            required
+            placeholder="e.g., Software Engineer"
+          />
+        </div>
+        <div class="form-control">
+          <label>Number of Questions:</label>
+          <input
+            type="number"
+            name="num_questions"
+            min="1"
+            max="20"
+            value="5"
+          />
+        </div>
+        <div class="form-control">
+          <label>Mode:</label>
+          <select name="mode">
+            <option>Beginner</option>
+            <option>Advanced</option>
+          </select>
+        </div>
+        <div class="form-control checkbox-group">
+          <label>Save to File?</label>
+          <input type="checkbox" name="save" />
+        </div>
+        <button type="submit">Generate Questions</button>
+      </form>
+
+      {% if output %}
+      <div class="output-section">
+        <h3>Generated Questions:</h3>
+        <textarea readonly>{{ output }}</textarea>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
