@@ -1,121 +1,165 @@
-🧠 Quizzify: AI Interview Question Generator
+Sure! Here's a clean, well-structured `README.md` file for your **Quizzify: AI Interview Question Generator** project, optimized for readability and GitHub presentation:
 
-Quizzify is a privacy-first, offline tool that generates realistic technical interview questions and answers for any job role using local AI models. Choose your role, set the difficulty, and get instant, context-aware questions—no internet or cloud required.
+---
 
-🌟 Features
+````markdown
+# 🧠 Quizzify: AI Interview Question Generator
 
-- 100% Offline: All processing is local—your data never leaves your computer.
-- Role-based Q&A: Generate questions for any job role (e.g., Data Scientist, Software Engineer).
-- Difficulty Modes: Choose Beginner or Advanced for tailored questions and answers.
-- Save to Markdown: Download your generated questions as a Markdown file.
-- LLM Powered: Uses Ollama to run large language models locally.
-- Modern Web UI: Clean, responsive interface for easy interaction.
+**Quizzify** is a privacy-first, fully offline tool that generates realistic technical interview questions and answers using **local AI models**. Whether you're preparing for a **Software Engineer** or **Data Scientist** role, Quizzify tailors questions to your job role and difficulty level—all without sending your data to the cloud.
 
-🧐 How It Works
+---
 
-1. Prompt Template: Loads a customizable prompt for your selected job role and settings.
-2. LLM Generation: Sends the prompt to a local LLM (via Ollama) for question and answer generation.
-3. Output: Displays the results in the web UI and allows you to save them as a Markdown file.
+## 🌟 Features
 
-🛠️ Requirements
+- ✅ **100% Offline** – All data and AI inference run locally on your machine.
+- 👩‍💻 **Role-based Q&A** – Get questions for any job role (e.g., Backend Developer, AI Engineer).
+- 🎚️ **Difficulty Levels** – Choose between **Beginner** and **Advanced** modes.
+- 📝 **Export to Markdown** – Save your generated questions as a `.md` file.
+- 🤖 **LLM Powered** – Uses [Ollama](https://ollama.com) to run large language models locally.
+- 💻 **Modern Web UI** – Clean and responsive Flask-based interface.
+
+---
+
+## 🧐 How It Works
+
+1. **Prompt Loading** – Custom prompt templates are used based on the selected job role and difficulty.
+2. **LLM Generation** – Sends prompts to your local LLM using Ollama.
+3. **Display & Export** – Questions and answers appear in the web UI with an option to export.
+
+---
+
+## 🛠️ Requirements
 
 - Python 3.8 or higher
-- Ollama (for local LLM inference)
-- See requirements.txt for Python dependencies
+- [Ollama](https://ollama.com) installed and added to your PATH
+- Dependencies listed in `requirements.txt`
 
-⚡ Quickstart
+---
 
-Clone the repository:
+## ⚡ Quickstart
 
-```sh
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/Nishi-Kanta-Paul/Quizzify-AI-Interview-Question-Generator.git
 cd ai_interview_generator
 ```
+````
 
-Install Python dependencies:
+### 2. Install Dependencies
 
-```sh
+```bash
 pip install -r requirements.txt
 ```
 
-Install Ollama and add to PATH:
+### 3. Install & Configure Ollama
 
-- Download from [Ollama.com](https://ollama.com/)
-- Make sure `ollama` runs from your terminal (test with `ollama --version`)
-- Pull a model (e.g., `phi`):
-  ```sh
+- Download Ollama: [https://ollama.com](https://ollama.com)
+
+- Add `ollama` to your system PATH
+
+- Test it:
+
+  ```bash
+  ollama --version
+  ```
+
+- Pull a local LLM (e.g., `phi`):
+
+  ```bash
   ollama pull phi
   ```
 
-Run the app:
+### 4. Run the App
 
-```sh
+```bash
 python app.py
 ```
 
-Open your browser: Go to http://localhost:5000
+Open in your browser:
+👉 [http://localhost:5000](http://localhost:5000)
 
-�️ Usage
+---
 
-Web App
+## 🖥️ Usage
 
-- Go to http://localhost:5000
-- Enter a job role, number of questions, and select mode
-- Click "Generate Questions"
-- Optionally, save the questions to a Markdown file
+1. Navigate to [http://localhost:5000](http://localhost:5000)
+2. Input a job role (e.g., "Frontend Developer")
+3. Select number of questions and difficulty
+4. Click **Generate Questions**
+5. Optionally, click **Download Markdown** to save your results
 
-🧩 Project Structure
+---
 
-├── app.py # Flask web app
-├── generator.py # Generates questions using Ollama
-├── ollama_interface.py # LLM interaction
-├── utils.py # Utility functions
-├── requirements.txt # Python dependencies
+## 📁 Project Structure
+
+```
+├── app.py                 # Flask web app
+├── generator.py           # Main logic for generating Q&A
+├── ollama_interface.py    # Handles local LLM interactions
+├── utils.py               # Helper functions
+├── requirements.txt       # Python dependencies
 ├── prompts/
-│ └── base_prompt.txt # Prompt template
+│   └── base_prompt.txt    # Prompt template for LLM
 ├── static/
-│ └── style.css # App styling
+│   └── style.css          # Styling for the UI
 ├── templates/
-│ └── index.html # Web UI
-└── **pycache**/ # Python cache (gitignored)
+│   └── index.html         # Web UI template
+└── __pycache__/           # Python cache (auto-generated)
+```
 
-� Troubleshooting
+---
 
-Ollama not found?
+## ❓ FAQ
 
-- Make sure Ollama is installed and its directory is in your system PATH.
-- Restart your terminal after installation.
+**Q: Is my data sent to the cloud?**
+**A:** Never. All processing happens locally via Ollama.
 
-No response or timeout?
+**Q: Can I use a different LLM model?**
+**A:** Yes. Modify the model name in `ollama_interface.py` (default is `phi`).
 
-- The first run may take longer as the model is downloaded and loaded.
-- Increase the timeout in `ollama_interface.py` if needed.
-- Check for errors in the terminal where you started the Flask app.
+**Q: Why is the first run slow?**
+**A:** The model is downloaded and loaded into memory. Future runs are much faster.
 
-❓ FAQ
+**Q: Can I use this for non-technical roles?**
+**A:** Absolutely. Just input any job title you want!
 
-**Q: Is my data sent to the cloud?**  
-A: No. All processing is local. Your job roles and questions never leave your machine.
+---
 
-**Q: Can I use my own LLM model?**  
-A: Yes! You can change the model name in `ollama_interface.py` (default is `phi`).
+## 🛠 Troubleshooting
 
-**Q: Why is it slow the first time?**  
-A: The model may need to be downloaded and loaded into memory. Subsequent runs are faster.
+**Problem:** `ollama` not found
+**Solution:**
 
-**Q: Can I use this for non-technical roles?**  
-A: Yes! Just enter any job role you want.
+- Ensure Ollama is installed and added to PATH
+- Restart terminal after installation
 
-🤝 Contributing
+**Problem:** Timeout or no response
+**Solution:**
 
-Pull requests and suggestions are welcome! Please open an issue or submit a PR.
+- Wait for the model to fully load
+- Increase timeout in `ollama_interface.py` if necessary
+- Check terminal for error messages
 
-📜 License
+---
 
-This project is licensed under the MIT License.
+## 🤝 Contributing
 
-🙏 Credits
+We welcome contributions!
+Please open an issue or submit a pull request with improvements or feature suggestions.
 
-Ollama for local LLM serving  
-Flask  
-Made with ❤️ for privacy-conscious interview preparation.
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See `LICENSE` for details.
+
+---
+
+## 🙏 Credits
+
+- [Ollama](https://ollama.com) – For enabling local LLM inference
+- [Flask](https://flask.palletsprojects.com) – For building the web UI
+- Built with ❤️ for **privacy-conscious** interview preparation
+
+---
