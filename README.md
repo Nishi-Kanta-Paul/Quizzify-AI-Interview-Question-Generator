@@ -1,8 +1,3 @@
-Sure! Here's a clean, well-structured `README.md` file for your **Quizzify: AI Interview Question Generator** project, optimized for readability and GitHub presentation:
-
----
-
-````markdown
 # 🧠 Quizzify: AI Interview Question Generator
 
 **Quizzify** is a privacy-first, fully offline tool that generates realistic technical interview questions and answers using **local AI models**. Whether you're preparing for a **Software Engineer** or **Data Scientist** role, Quizzify tailors questions to your job role and difficulty level—all without sending your data to the cloud.
